@@ -1,87 +1,110 @@
-.product-list{
-    width: 100%;
-    max-width: 1326px;  
-    margin: 0 auto;
+.product-list {
+  width: 100%;
+  max-width: 1326px;
+  margin: 0 auto;
 }
 
-h4{
-    text-align: center;
-    padding: 60px;
+h4 {
+  text-align: center;
+  padding: 60px;
+  font-size: 30px;
 }
 
-
-.vitrine{
-    width: 100%;
-    display: flex;
-    /* border: 1px solid black; */
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: space-around;
-    padding-bottom: 24px;
+.vitrine {
+  width: 100%;
+  display: flex;
+  /* border: 1px solid black; */
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding-bottom: 24px;
 }
 
 .vitrine div {
-    width: 21%;
-    height: 450px;
-    border: 1px solid #99999957;
-    box-shadow: 0 1px 3px 0 rgba(0, 0 ,0 ,0.05);
-    cursor: pointer;
-    transition: .8s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  width: 283px;
+  height: 399px;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+  transition: 0.8s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 3px;
 }
 
 .vitrine div:hover {
-    box-shadow: 1px 7px 20px 0px rgba(0, 0, 0, 0.21);
-    transform: translateY(20px);
-    transition: all 0.4s;
+  box-shadow: 1px 7px 20px 0px rgba(0, 0, 0, 0.21);
+  /* height: 450px; */
+  transition: all 0.3s;
 }
 
-
-.vitrine div img{
-    width: 80%;
-    margin: 0 auto;
+.vitrine div:hover > button {
+  transform: translateY(2px);
+  transition: all 2s;
+  display: block;
 }
 
-
-.vitrine div h5{
- text-align: center ;
+.vitrine div img {
+  width: 80%;
+  margin: 0 auto;
 }
 
-.vitrine div p{
-    text-align: center;
+.vitrine div h5 {
+  text-align: center;
+  font-size: 16px;
 }
 
+.vitrine div p {
+  text-align: center;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ef7460;
+}
 
 .vitrine div button {
-    border: 0px;
-    color: #fff;
-    width: 80%;
-    margin: 0 auto;
-    height: 60px;
-    background: #ef7560;
+  border: 0px;
+  color: #fff;
+  width: 223px;
+  margin: 0 auto;
+  height: 50px;
+  background: #ef7460;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 2s;
+  display: none;
 }
 
+@media only screen and (max-width: 1024px) {
+  .vitrine div button {
+    display: block;
+  }
 
+  .vitrine div {
+    margin: 10px;
+  }
+}
 
+@media only screen and (max-width: 475px) {
 
-@media only screen and (max-width: 600px) {
-
-
-    .vitrine {
-        flex-direction: column;
+    h4{
+        font-size: 6vw;
     }
-    
-    div {}
-    
-    .vitrine div {
-        width: 97%;
-        margin: 0 auto;
-    }
-    
-    
+  .vitrine {
+    flex-direction: column;
+  }
+
+  .vitrine div {
+    width: 97%;
+    margin: 10px auto;
+  }
+
+  .vitrine div img {
+    width: 56%;
+  }
 
 
-
+  .vitrine div button {
+    display: block;
+  }
 }

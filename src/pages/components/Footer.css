@@ -1,0 +1,92 @@
+footer.footer {
+    width: 100%;
+    background: #ef7460;
+    margin-bottom: 20px;
+}
+
+.contentFooter {
+  width: 100%;
+  max-width: 1326px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 165px;
+}
+
+.contentFooter div {
+  width: 260px;
+  height: 95px;
+}
+
+.contentFooter h5 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.contentFooter p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.contentFooter form {
+  width: 992px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contentFooter form input {
+  width: 350px;
+  height: 50px;
+  border-radius: 3px;
+  border: none;
+  padding: 15px 21px;
+}
+
+.contentFooter form input::placeholder {
+  font-size: 16px;
+  text-align: left;
+}
+
+.contentFooter button {
+    border: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 3px;
+    background: #FFFFFF;
+    color: #ef7460;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .contentFooter {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .contentFooter form {
+    width: 100%;
+    height: 221px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+  .contentFooter div {
+    text-align: center;
+  }
+
+
+  .contentFooter form input{
+      width: 96%;
+  }
+
+
+  .contentFooter button {
+    width: 96%;
+}
+
+ 
+  }
+
