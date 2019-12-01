@@ -46,7 +46,7 @@ function ImgLogo() {
 
 class BtnMenu extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return <li>{this.props.nomemenu}</li>;
   }
 }
