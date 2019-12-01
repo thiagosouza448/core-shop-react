@@ -21,7 +21,7 @@ h4 {
 }
 
 .vitrine div {
-  width: 283px;
+  width: 246px;
   height: 399px;
   border: 1px solid #eeeeee;
   cursor: pointer;
@@ -45,7 +45,7 @@ h4 {
 }
 
 .vitrine div img {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
