@@ -51,6 +51,12 @@ function Vitrine() {
         <p>R$ 29,00</p>
         <button>Comprar</button>
       </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
 
     </div>
   );
