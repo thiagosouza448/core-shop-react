@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 
 import "./ListProducts.css";
@@ -16,7 +16,7 @@ export default function ListProduct() {
       <div className="product-list">
         <h4>Produtos em destaque</h4>
         <Teste />
-        
+        <Vitrine />
       </div>
 
       <Footer />
@@ -24,7 +24,37 @@ export default function ListProduct() {
   );
 }
 
+function Vitrine() {
+  return (
+    <div className="vitrine">
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
 
+    </div>
+  );
+}
 
 class Teste extends Component {
   state = {
@@ -47,7 +77,7 @@ class Teste extends Component {
       <div  className="vitrine">
 
         {this.state.users.map(user => (
-          <div id={user.productId} key={user.data}>
+          <div id={user.productId} key={user.productId}>
             <img src={user.imageUrl} alt={user.productName} />
             <h5>{user.productName}</h5>
             <p>R$ {user.price}</p>
