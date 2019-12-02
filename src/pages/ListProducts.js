@@ -64,14 +64,14 @@ function Vitrine() {
 
 class Teste extends Component {
   state = {
-    users: []
+    products: []
   };
   componentDidMount() {
     const url = `${API_URL}/products/`;
     axios.get(url)
       .then(response => response.data)
       .then(data => {
-        this.setState({ users: data });
+        this.setState({ products: data });
 
 
 
@@ -82,11 +82,11 @@ class Teste extends Component {
     return (
       <div  className="vitrine">
 
-        {this.state.users.map(user => (
-          <div id={user.productId} key={user.productId}>
-            <img src={user.imageUrl} alt={user.productName} />
-            <h5>{user.productName}</h5>
-            <p>R$ {user.price}</p>
+        {this.state.products.map(product => (
+          <div id={product.productId} key={product.productId}>
+            <img src={product.imageUrl} alt={product.productName} />
+            <h5>{product.productName}</h5>
+            <p>R$ {product.price}</p>
             <button>Comprar</button>
           </div>
 
