@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 
 import "./ListProducts.css";
@@ -16,7 +16,7 @@ export default function ListProduct() {
       <div className="product-list">
         <h4>Produtos em destaque</h4>
         <Teste />
-        
+        <Vitrine />
       </div>
 
       <Footer />
@@ -24,18 +24,54 @@ export default function ListProduct() {
   );
 }
 
+function Vitrine() {
+  return (
+    <div className="vitrine">
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
+      <div>
+        <img src={ImgUrsoTeste} alt="2" />
+        <h5>Nome do produto completo</h5>
+        <p>R$ 29,00</p>
+        <button>Comprar</button>
+      </div>
 
+    </div>
+  );
+}
 
 class Teste extends Component {
   state = {
-    users: []
+    products: []
   };
   componentDidMount() {
     const url = `${API_URL}/products/`;
     axios.get(url)
       .then(response => response.data)
       .then(data => {
-        this.setState({ users: data });
+        this.setState({ products: data });
 
 
 
@@ -46,11 +82,11 @@ class Teste extends Component {
     return (
       <div  className="vitrine">
 
-        {this.state.users.map(user => (
-          <div id={user.productId} key={user.data}>
-            <img src={user.imageUrl} alt={user.productName} />
-            <h5>{user.productName}</h5>
-            <p>R$ {user.price}</p>
+        {this.state.products.map(product => (
+          <div id={product.productId} key={product.productId}>
+            <img src={product.imageUrl} alt={product.productName} />
+            <h5>{product.productName}</h5>
+            <p>R$ {product.price}</p>
             <button>Comprar</button>
           </div>
 
