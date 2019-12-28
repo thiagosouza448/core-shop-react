@@ -8,7 +8,7 @@ export default function Product() {
       <Menu />
 
       <div className="productId">
-        <h2>Produto 01</h2>
+        <h2>produc</h2>
       </div>
 
       <Footer />
